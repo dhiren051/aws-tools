@@ -1,7 +1,43 @@
 # aws-tools
 A small tool set for various Amazon AWS operations
 
-For now, there's only a few tools in the tool belt but it's expected to grow over time.
+For now, there's only a few tools in the belt but it's expected to grow over time. I tend to pull this into existing projects, for example:
+
+```bash
+myHost:project-x userName$ tree -d -L 2
+.
+├── floppy
+├── http
+│   └── debian-8
+├── scripts
+│   ├── common
+│   ├── debian
+│   └── ubuntu
+├── sources
+└── zarchive
+```
+
+...as a git submodule, by adding it to the scripts directory:
+
+```bash
+git submodule add git@github.com:todd-dsm/aws-tools.git scripts/aws-tools
+
+myHost:project-x userName$ tree -d -L 2
+.
+...
+├── scripts
+│   ├── aws-tools <-- here
+│   ├── common
+│   ├── debian
+│   └── ubuntu
+...
+```
+
+Then update it periodically:
+
+`myHost:project-x userName$ git submodule update --recursive --remote`
+
+***
 
 ## Find the latest Amazon AMI
 This script will help you to find the latest, most up-to-date, AMI of a given distro and version. For example, when this script is ran:
