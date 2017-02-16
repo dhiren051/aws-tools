@@ -425,9 +425,11 @@ esac
 
 ###---
 ### Call it out
+###   The amiLatest is sent to stdOut for consumption by a calling script.
+###   The other is exits for testing purposes.
 ###---
-printf '\n%s\n\n' "The latest ImageId for $reqdDistro $reqdName: '$amiLatest'"
-export reqdImageId="$amiLatest"
+#printf '\n%s\n\n' "The latest ImageId for $reqdDistro $reqdName: '$amiLatest'"
+printf '%s\n' "$amiLatest"
 # OUTPUT:
 #-----------------------------------
 
