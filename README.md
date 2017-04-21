@@ -39,6 +39,11 @@ Then update it periodically:
 
 ***
 
+## AWS Disco
+Begin working with a modular terraform project - in a any environment _fast_. See the [AWS-Disco Wiki] for the instructions.
+
+
+
 ## Access AWS Security Group
 This script determines your local gateway address then asks AWS if the specified security group has a rule in place to let you through from that address on port 22. This is great for people with DHCP gateway addresses or people (like me) that sometimes spend too much time in hotel rooms. See the [access-aws-securitygroup] wiki page for more details. To run:
 
@@ -60,6 +65,7 @@ This is helpful when starting a new job with [Packer]. Check the [find-latest-am
 
 [access-aws-securitygroup]:https://github.com/todd-dsm/aws-tools/wiki/access-aws-securitygroup
 [changelog-v0.12.1]:https://github.com/mitchellh/packer/blob/master/CHANGELOG.md#0121-december-15-2016
+[AWS-Disco Wiki]:https://github.com/todd-dsm/aws-tools/wiki/AWS-Disco
 [source_ami_filter]:https://www.packer.io/docs/builders/amazon-ebs.html#source_ami_filter
 [Packer]:https://www.packer.io/intro/
 [find-latest-ami]:https://github.com/todd-dsm/aws-tools/wiki/find-latest-ami
