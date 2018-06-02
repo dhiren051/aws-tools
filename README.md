@@ -1,47 +1,12 @@
 # aws-tools
 A small tool set for various Amazon AWS operations
 
-For now, there's only a few tools in the belt but it's expected to grow over time. I tend to pull this into existing projects, for example:
-
-```bash
-myHost:project-x userName$ tree -d -L 2
-.
-├── floppy
-├── http
-│   └── debian-8
-├── scripts
-│   ├── common
-│   ├── debian
-│   └── ubuntu
-├── sources
-└── zarchive
-```
-
-...as a git submodule, by adding it to the scripts directory:
-
-```bash
-git submodule add git@github.com:todd-dsm/aws-tools.git scripts/aws-tools
-
-myHost:project-x userName$ tree -d -L 2
-.
-...
-├── scripts
-│   ├── aws-tools <-- here
-│   ├── common
-│   ├── debian
-│   └── ubuntu
-...
-```
-
-Then update it periodically:
-
-`myHost:project-x userName$ git submodule update --recursive --remote`
+For now, there's only a few tools in the belt but it's expected to grow over time. I tend to clone this down and refer to it occasionally
 
 ***
 
 ## AWS Disco
-Begin working with a modular terraform project - in a any environment _fast_. See the [AWS-Disco Wiki] for the instructions.
-
+Discover what's out there and start building with it _faster_; it's not great but sometimes it makes starting easier. See the [AWS-Disco Wiki].
 
 
 ## Access AWS Security Group
