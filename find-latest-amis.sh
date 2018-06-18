@@ -179,14 +179,15 @@ procRegion() {
         specdRegion="$defRegion"
     fi
     #printf '%s\n' "All Regions: ${allRegions[*]}"
+    #--- FIXME The count is jacked so we never reach us-west-2                    ---#
     printf '%s\n' "  Searching for $specdRegion in ${#allRegions[@]} AWS Regions."
-    for (( i = 0; i < count; i++ )); do
+    for (( i = 0; i < "$count"; i++ )); do
         if [[ "${allRegions[$i]}" == "$specdRegion" ]]; then
             printf '%s\n' "    Found the specified region: ${allRegions[$i]}"
             export reqdRegion="$specdRegion"
             break
         fi
-        if [[ "$i" -ge '13' ]]; then
+        if [[ "$i" -ge "$count" ]]; then
             printf '\n%s\n\n' "  This Region looks like a type-o: $specdRegion"
             exit
         fi
@@ -263,7 +264,7 @@ procDistro() {
             export reqdDistro="$specdDistro"
             case "${reqdName##*-}" in
                 stable)
-                    export reqdOwnerId='aws-marketplace'
+                    export reqdOwnerId='595879546273'
                     ;;
                 beta)
                     export reqdOwnerId='595879546273'
@@ -444,7 +445,7 @@ exit 0
 ###----------------------------------------------------------------------------
 # Distro              OwnerId
 # --------------------------------------
-# CoreOS            aws-marketplace
+# CoreOS            595879546273    |   aws-marketplace
 # CentOS            aws-marketplace
 # Debian            379101102735
 # Ubuntu            099720109477
